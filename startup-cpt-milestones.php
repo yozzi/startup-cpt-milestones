@@ -43,7 +43,7 @@ function startup_reloaded_milestones() {
 		'has_archive'         => true,
 		'exclude_from_search' => true,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'page'
+		'capability_type'     => 'milestone'
 	);
 	register_post_type( 'milestones', $args );
 
