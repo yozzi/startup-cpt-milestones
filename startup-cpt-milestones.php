@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: StartUp Milestones Custom Post
-Description: Le plugin pour lactiver le Custom Post Milestones
+Description: Le plugin pour activer le Custom Post Milestones
 Author: Yann Caplain
-Version: 1
+Version: 1.0
 */
 
 //CPT
