@@ -43,18 +43,42 @@ function startup_reloaded_milestones() {
 		'has_archive'         => true,
 		'exclude_from_search' => true,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'page'
+        'capability_type'     => array('milestone','milestones'),
+        'map_meta_cap'        => true
 	);
 	register_post_type( 'milestones', $args );
 
 }
 add_action( 'init', 'startup_reloaded_milestones', 0 );
 
+// Capabilities
+
+register_activation_hook( __FILE__, 'startup_reloaded_milestones_caps' );
+
+function startup_reloaded_milestones_caps() {
+	
+	$role_admin = get_role( 'administrator' );
+	
+	$role_admin->add_cap( 'edit_milestone' );
+	$role_admin->add_cap( 'read_milestone' );
+	$role_admin->add_cap( 'delete_milestone' );
+	$role_admin->add_cap( 'edit_others_milestones' );
+	$role_admin->add_cap( 'publish_milestones' );
+	$role_admin->add_cap( 'edit_milestones' );
+	$role_admin->add_cap( 'read_private_milestones' );
+	$role_admin->add_cap( 'delete_milestones' );
+	$role_admin->add_cap( 'delete_private_milestones' );
+	$role_admin->add_cap( 'delete_published_milestones' );
+	$role_admin->add_cap( 'delete_others_milestones' );
+	$role_admin->add_cap( 'edit_private_milestones' );
+	$role_admin->add_cap( 'edit_published_milestones' );
+}
+
 
 // Metaboxes
-add_action( 'cmb2_init', 'startup_reloaded_metabox_milestones' );
+add_action( 'cmb2_init', 'startup_reloaded_milestones_meta' );
 
-function startup_reloaded_metabox_milestones() {
+function startup_reloaded_milestones_meta() {
     require get_template_directory() . '/inc/font-awesome.php';
     
 	// Start with an underscore to hide fields from custom fields list
