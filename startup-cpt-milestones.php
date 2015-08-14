@@ -8,7 +8,6 @@ Version: 1.0
 
 //CPT
 function startup_reloaded_milestones() {
-
 	$labels = array(
 		'name'                => 'Milestones',
 		'singular_name'       => 'Milestone',
@@ -49,16 +48,13 @@ function startup_reloaded_milestones() {
 	register_post_type( 'milestones', $args );
 
 }
+
 add_action( 'init', 'startup_reloaded_milestones', 0 );
 
 // Capabilities
 
-register_activation_hook( __FILE__, 'startup_reloaded_milestones_caps' );
-
 function startup_reloaded_milestones_caps() {
-	
 	$role_admin = get_role( 'administrator' );
-	
 	$role_admin->add_cap( 'edit_milestone' );
 	$role_admin->add_cap( 'read_milestone' );
 	$role_admin->add_cap( 'delete_milestone' );
@@ -74,10 +70,9 @@ function startup_reloaded_milestones_caps() {
 	$role_admin->add_cap( 'edit_published_milestones' );
 }
 
+register_activation_hook( __FILE__, 'startup_reloaded_milestones_caps' );
 
 // Metaboxes
-add_action( 'cmb2_init', 'startup_reloaded_milestones_meta' );
-
 function startup_reloaded_milestones_meta() {
     require get_template_directory() . '/inc/font-awesome.php';
     
@@ -110,4 +105,6 @@ function startup_reloaded_milestones_meta() {
 		'type'       => 'text'
 	) );
 }
+
+add_action( 'cmb2_init', 'startup_reloaded_milestones_meta' );
 ?>
