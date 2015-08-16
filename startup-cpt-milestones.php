@@ -3,7 +3,7 @@
 Plugin Name: StartUp Milestones Custom Post
 Description: Le plugin pour activer le Custom Post Milestones
 Author: Yann Caplain
-Version: 1.0
+Version: 1.0.0
 */
 
 //CPT
