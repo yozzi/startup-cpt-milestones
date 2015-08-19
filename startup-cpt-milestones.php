@@ -3,18 +3,18 @@
 Plugin Name: StartUp Milestones Custom Post Type
 Description: Le plugin pour activer le Custom Post Milestones
 Author: Yann Caplain
-Version: 1.1.0
+Version: 1.1.1
 */
 
 //GitHub Plugin Updater
 
-function startup_reloaded_github_plugin_updater() {
+function startup_reloaded_cpt_milestones_github_plugin_updater() {
 	include_once 'lib/updater.php';
 	define( 'WP_GITHUB_FORCE_UPDATE', true );
 	if ( is_admin() ) {
 		$config = array(
 			'slug' => plugin_basename( __FILE__ ),
-			'proper_folder_name' => 'startup-cpt-menus',
+			'proper_folder_name' => 'startup-cpt-milestones',
 			'api_url' => 'https://api.github.com/repos/yozzi/startup-cpt-milestones',
 			'raw_url' => 'https://raw.github.com/yozzi/startup-cpt-milestones/master',
 			'github_url' => 'https://github.com/yozzi/startup-cpt-milestones',
@@ -29,8 +29,7 @@ function startup_reloaded_github_plugin_updater() {
 	}
 }
 
-add_action( 'init', 'startup_reloaded_github_plugin_updater' );
-
+add_action( 'init', 'startup_reloaded_cpt_milestones_github_plugin_updater' );
 
 //CPT
 function startup_reloaded_milestones() {
