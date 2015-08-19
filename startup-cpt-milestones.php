@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: StartUp Milestones Custom Post Type
+Plugin Name: StartUp Milestones Custom Post
 Description: Le plugin pour activer le Custom Post Milestones
 Author: Yann Caplain
 Version: 1.1.0
@@ -31,10 +31,6 @@ function startup_reloaded_github_plugin_updater() {
 
 add_action( 'init', 'startup_reloaded_github_plugin_updater' );
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 //CPT
 function startup_reloaded_milestones() {
 	$labels = array(
