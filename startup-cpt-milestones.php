@@ -75,6 +75,14 @@ function startup_reloaded_milestones() {
 
 add_action( 'init', 'startup_reloaded_milestones', 0 );
 
+//Flusher les permalink à l'activation du plgin pour qu'ils fonctionnent sans mise à jour manuelle
+function startup_reloaded_milestones_rewrite_flush() {
+    startup_reloaded_milestones();
+    flush_rewrite_rules();
+}
+
+register_activation_hook( __FILE__, 'startup_reloaded_milestones_rewrite_flush' );
+
 // Capabilities
 
 function startup_reloaded_milestones_caps() {
