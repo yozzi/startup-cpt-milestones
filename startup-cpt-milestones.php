@@ -138,7 +138,7 @@ function startup_reloaded_milestones_meta() {
 	) );
 }
 
-add_action( 'cmb2_init', 'startup_reloaded_milestones_meta' );
+add_action( 'cmb2_admin_init', 'startup_reloaded_milestones_meta' );
 
 // Shortcode
 add_shortcode( 'milestones', function( $atts, $content= null ){
