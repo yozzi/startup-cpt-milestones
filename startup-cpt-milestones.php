@@ -139,4 +139,11 @@ function startup_reloaded_milestones_meta() {
 }
 
 add_action( 'cmb2_init', 'startup_reloaded_milestones_meta' );
+
+// Shortcode
+add_shortcode( 'milestones', function( $atts, $content= null ){
+    ob_start();
+    require get_template_directory() . '/inc/shortcodes/milestones.php';
+    return ob_get_clean();
+});
 ?>
