@@ -114,12 +114,12 @@ function startup_reloaded_milestones_meta() {
 
 	$cmb_box = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
-		'title'         => __( 'Milestone details', 'cmb2' ),
+		'title'         => __( 'Milestone details', 'startup-cpt-milestones' ),
 		'object_types'  => array( 'milestones' )
 	) );
     
     $cmb_box->add_field( array(
-        'name'             => __( 'Icon', 'cmb2' ),
+        'name'             => __( 'Icon', 'startup-cpt-milestones' ),
         'id'               => $prefix . 'icon',
         'type'             => 'select',
         'show_option_none' => true,
@@ -127,13 +127,13 @@ function startup_reloaded_milestones_meta() {
     ) );
     
 	$cmb_box->add_field( array(
-		'name'       => __( 'Value', 'cmb2' ),
+		'name'       => __( 'Value', 'startup-cpt-milestones' ),
 		'id'         => $prefix . 'value',
 		'type'       => 'text'
 	) );
     
     $cmb_box->add_field( array(
-		'name'       => __( 'Unit', 'cmb2' ),
+		'name'       => __( 'Unit', 'startup-cpt-milestones' ),
 		'id'         => $prefix . 'unit',
 		'type'       => 'text'
 	) );
