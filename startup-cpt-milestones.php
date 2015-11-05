@@ -142,9 +142,17 @@ function startup_reloaded_milestones_meta() {
 add_action( 'cmb2_admin_init', 'startup_reloaded_milestones_meta' );
 
 // Shortcode
-add_shortcode( 'milestones', function( $atts, $content= null ){
-    ob_start();
-    require get_template_directory() . '/template-parts/content-milestones.php';
-    return ob_get_clean();
-});
+function startup_reloaded_milestones_shortcode( $atts ) {
+
+	// Attributes
+    $atts = shortcode_atts(array(
+            'bg' => '#fff'
+        ), $atts);
+    
+	// Code
+        ob_start();
+        require get_template_directory() . '/template-parts/content-milestones.php';
+        return ob_get_clean();    
+}
+add_shortcode( 'milestones', 'startup_reloaded_milestones_shortcode' );
 ?>
