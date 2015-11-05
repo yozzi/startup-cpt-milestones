@@ -146,7 +146,7 @@ function startup_reloaded_milestones_shortcode( $atts ) {
 
 	// Attributes
     $atts = shortcode_atts(array(
-            'bg' => '#fff'
+            'bg' => ''
         ), $atts);
     
 	// Code
