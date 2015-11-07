@@ -154,5 +154,20 @@ function startup_reloaded_milestones_shortcode( $atts ) {
         require get_template_directory() . '/template-parts/content-milestones.php';
         return ob_get_clean();    
 }
+
 add_shortcode( 'milestones', 'startup_reloaded_milestones_shortcode' );
+
+// Add code to header
+function startup_cpt_milestones_header() { ?>
+    <script type="text/javascript">
+            jQuery(document).ready(function( $ ) {
+                jQuery('.milestone-count').counterUp({
+                    delay: 50, // the delay time in ms
+                    time: 3500 // the speed time in ms
+                });
+            });
+        </script>
+<?php }
+
+add_action( 'wp_head', 'startup_cpt_milestones_header' );
 ?>
