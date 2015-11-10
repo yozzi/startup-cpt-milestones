@@ -159,8 +159,8 @@ add_shortcode( 'milestones', 'startup_reloaded_milestones_shortcode' );
 
 // Enqueue scripts and styles.
 function startup_cpt_milestones_scripts() {
-    wp_enqueue_script( 'startup-reloaded-counterup', get_template_directory_uri() . '/js/jquery.counterup.js', array( ), false, 'all' );       
-    wp_enqueue_script( 'startup-reloaded-waypoint', get_template_directory_uri() . '/js/waypoint.js', array( ), false, 'all' );
+    wp_enqueue_script( 'startup-reloaded-counterup', plugins_url( '/js/jquery.counterup.js', __FILE__ ), array( ), false, 'all' );       
+    wp_enqueue_script( 'startup-reloaded-waypoint', plugins_url( '/js/waypoint.js', __FILE__ ), array( ), false, 'all' );
 }
 
 add_action( 'wp_enqueue_scripts', 'startup_cpt_milestones_scripts' );
