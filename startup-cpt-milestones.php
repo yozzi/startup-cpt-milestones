@@ -168,13 +168,13 @@ add_action( 'wp_enqueue_scripts', 'startup_cpt_milestones_scripts' );
 // Add code to head
 function startup_cpt_milestones_head() { ?>
     <script type="text/javascript">
-            jQuery(document).ready(function( $ ) {
-                jQuery('.milestone-count').counterUp({
-                    delay: 50, // the delay time in ms
-                    time: 3500 // the speed time in ms
-                });
+        jQuery(document).ready(function( $ ) {
+            jQuery('.milestone-count').counterUp({
+                delay: 50, // the delay time in ms
+                time: 3500 // the speed time in ms
             });
-        </script>
+        });
+    </script>
 <?php }
 
 add_action( 'wp_head', 'startup_cpt_milestones_head' );
