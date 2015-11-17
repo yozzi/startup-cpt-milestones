@@ -34,25 +34,25 @@ add_action( 'init', 'startup_reloaded_milestones_updater' );
 //CPT
 function startup_reloaded_milestones() {
 	$labels = array(
-		'name'                => 'Milestones',
-		'singular_name'       => 'Milestone',
-		'menu_name'           => 'Milestones',
-		'name_admin_bar'      => 'Milestones',
-		'parent_item_colon'   => 'Parent Item:',
-		'all_items'           => 'All Items',
-		'add_new_item'        => 'Add New Item',
-		'add_new'             => 'Add New',
-		'new_item'            => 'New Item',
-		'edit_item'           => 'Edit Item',
-		'update_item'         => 'Update Item',
-		'view_item'           => 'View Item',
-		'search_items'        => 'Search Item',
-		'not_found'           => 'Not found',
-		'not_found_in_trash'  => 'Not found in Trash'
+        'name'                => _x( 'Milestones', 'Post Type General Name', 'startup-cpt-milestones' ),
+		'singular_name'       => _x( 'Milestone', 'Post Type Singular Name', 'startup-cpt-milestones' ),
+		'menu_name'           => __( 'Milestones', 'startup-cpt-milestones' ),
+		'name_admin_bar'      => __( 'Milestones', 'startup-cpt-milestones' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'startup-cpt-milestones' ),
+		'all_items'           => __( 'All Items', 'startup-cpt-milestones' ),
+		'add_new_item'        => __( 'Add New Item', 'startup-cpt-milestones' ),
+		'add_new'             => __( 'Add New', 'startup-cpt-milestones' ),
+		'new_item'            => __( 'New Item', 'startup-cpt-milestones' ),
+		'edit_item'           => __( 'Edit Item', 'startup-cpt-milestones' ),
+		'update_item'         => __( 'Update Item', 'startup-cpt-milestones' ),
+		'view_item'           => __( 'View Item', 'startup-cpt-milestones' ),
+		'search_items'        => __( 'Search Item', 'startup-cpt-milestones' ),
+		'not_found'           => __( 'Not found', 'startup-cpt-milestones' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'startup-cpt-milestones' )
 	);
 	$args = array(
-		'label'               => 'milestones',
-		'description'         => 'Compteurs Milestones',
+        'label'               => __( 'milestones', 'startup-cpt-milestones' ),
+        'description'         => __( '', 'startup-cpt-milestones' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'revisions' ),
 		'hierarchical'        => true,
