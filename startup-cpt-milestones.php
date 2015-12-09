@@ -191,7 +191,7 @@ function startup_cpt_milestones_shortcode_ui() {
             'listItemImage' => 'dashicons-awards',
             'attrs' => array(
                 array(
-                    'label' => 'Background',
+                    'label' => esc_html__( 'Background', 'startup-cpt-milestones' ),
                     'attr'  => 'bg',
                     'type'  => 'color',
                 ),
