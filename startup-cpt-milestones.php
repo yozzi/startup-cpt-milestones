@@ -13,7 +13,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 //GitHub Plugin Updater
-function startup_reloaded_milestones_updater() {
+function startup_cpt_milestones_updater() {
 	include_once 'lib/updater.php';
 	//define( 'WP_GITHUB_FORCE_UPDATE', true );
 	if ( is_admin() ) {
@@ -34,10 +34,10 @@ function startup_reloaded_milestones_updater() {
 	}
 }
 
-//add_action( 'init', 'startup_reloaded_milestones_updater' );
+//add_action( 'init', 'startup_cpt_milestones_updater' );
 
 //CPT
-function startup_reloaded_milestones() {
+function startup_cpt_milestones() {
 	$labels = array(
         'name'                => _x( 'Milestones', 'Post Type General Name', 'startup-cpt-milestones' ),
 		'singular_name'       => _x( 'Milestone', 'Post Type Singular Name', 'startup-cpt-milestones' ),
@@ -79,19 +79,19 @@ function startup_reloaded_milestones() {
 
 }
 
-add_action( 'init', 'startup_reloaded_milestones', 0 );
+add_action( 'init', 'startup_cpt_milestones', 0 );
 
 //Flusher les permalink à l'activation du plugin pour qu'ils fonctionnent sans mise à jour manuelle
-function startup_reloaded_milestones_rewrite_flush() {
-    startup_reloaded_milestones();
+function startup_cpt_milestones_rewrite_flush() {
+    startup_cpt_milestones();
     flush_rewrite_rules();
 }
 
-register_activation_hook( __FILE__, 'startup_reloaded_milestones_rewrite_flush' );
+register_activation_hook( __FILE__, 'startup_cpt_milestones_rewrite_flush' );
 
 // Capabilities
 
-function startup_reloaded_milestones_caps() {
+function startup_cpt_milestones_caps() {
 	$role_admin = get_role( 'administrator' );
 	$role_admin->add_cap( 'edit_milestone' );
 	$role_admin->add_cap( 'read_milestone' );
@@ -108,14 +108,14 @@ function startup_reloaded_milestones_caps() {
 	$role_admin->add_cap( 'edit_published_milestones' );
 }
 
-register_activation_hook( __FILE__, 'startup_reloaded_milestones_caps' );
+register_activation_hook( __FILE__, 'startup_cpt_milestones_caps' );
 
 // Metaboxes
-function startup_reloaded_milestones_meta() {
+function startup_cpt_milestones_meta() {
     require get_template_directory() . '/inc/font-awesome.php';
     
 	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_startup_reloaded_milestones_';
+	$prefix = '_startup_cpt_milestones_';
 
 	$cmb_box = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
@@ -144,10 +144,10 @@ function startup_reloaded_milestones_meta() {
 	) );
 }
 
-add_action( 'cmb2_admin_init', 'startup_reloaded_milestones_meta' );
+add_action( 'cmb2_admin_init', 'startup_cpt_milestones_meta' );
 
 // Shortcode
-function startup_reloaded_milestones_shortcode( $atts ) {
+function startup_cpt_milestones_shortcode( $atts ) {
 
 	// Attributes
     $atts = shortcode_atts(array(
@@ -160,7 +160,7 @@ function startup_reloaded_milestones_shortcode( $atts ) {
         return ob_get_clean();    
 }
 
-add_shortcode( 'milestones', 'startup_reloaded_milestones_shortcode' );
+add_shortcode( 'milestones', 'startup_cpt_milestones_shortcode' );
 
 // Shortcode UI
 /**
