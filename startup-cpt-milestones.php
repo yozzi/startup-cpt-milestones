@@ -204,7 +204,6 @@ if ( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
     add_action( 'init', 'startup_cpt_milestones_shortcode_ui');
 }
 
-
 // Enqueue scripts and styles.
 function startup_cpt_milestones_scripts() {
     wp_enqueue_script( 'counterup', plugins_url( '/js/jquery.counterup.js', __FILE__ ), array( ), '', true );       
