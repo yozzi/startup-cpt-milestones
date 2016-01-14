@@ -1,0 +1,138 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: StartUp CPT Milestones\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Thu Jan 14 2016 09:14:57 GMT-0500 (Est)\n"
+"POT-Revision-Date: Thu Jan 14 2016 09:15:02 GMT-0500 (Est)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+msgid "StartUp CPT Milestones"
+msgstr ""
+
+#. Description of the plugin
+msgid "Le plugin pour activer le Custom Post Milestones"
+msgstr ""
+
+#. Author of the plugin
+msgid "Yann Caplain"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:43
+msgctxt "Post Type General Name"
+msgid "Milestones"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:44
+msgctxt "Post Type Singular Name"
+msgid "Milestone"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:45 ../startup-cpt-milestones.php:46 ../startup-
+#: cpt-milestones.php:210
+msgid "Milestones"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:47
+msgid "Parent Item:"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:48
+msgid "All Items"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:49
+msgid "Add New Item"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:50
+msgid "Add New"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:51
+msgid "New Item"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:52
+msgid "Edit Item"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:53
+msgid "Update Item"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:54
+msgid "View Item"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:55
+msgid "Search Item"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:56
+msgid "Not found"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:57
+msgid "Not found in Trash"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:60
+msgid "milestones"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:127
+msgid "CMB2 plugin or StartUp Reloaded theme must be active to use custom metaboxes."
+msgstr ""
+
+#: ../startup-cpt-milestones.php:142
+msgid "Milestone details"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:147
+msgid "Icon"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:155
+msgid "Value"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:161
+msgid "Unit"
+msgstr ""
+
+#: ../startup-cpt-milestones.php:198
+msgid "Shortcake plugin must be active to use fast shortcodes."
+msgstr ""
+
+#: ../startup-cpt-milestones.php:214
+msgid "Background"
+msgstr ""
+
+#: ../lib/updater.php:434
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please reactivate "
+"it manually."
+msgstr ""
+
+#: ../lib/updater.php:435
+msgid "Plugin reactivated successfully."
+msgstr ""
