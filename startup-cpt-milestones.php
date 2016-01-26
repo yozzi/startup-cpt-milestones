@@ -3,7 +3,7 @@
 Plugin Name: StartUp CPT Milestones
 Description: Le plugin pour activer le Custom Post Milestones
 Author: Yann Caplain
-Version: 1.2.0
+Version: 1.0.0
 Text Domain: startup-cpt-milestones
 Domain Path: /languages
 */
