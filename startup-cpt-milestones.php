@@ -234,7 +234,7 @@ function startup_cpt_milestones_scripts() {
     wp_enqueue_style( 'startup-cpt-milestones-style', plugins_url( '/css/startup-cpt-milestones.css', __FILE__ ), array( ), false, 'all' );
 }
 
-add_action( 'wp_enqueue_scripts', 'startup_cpt_milestones_scripts' );
+add_action( 'wp_enqueue_scripts', 'startup_cpt_milestones_scripts', 15 );
 
 // Add code to head
 function startup_cpt_milestones_head() { ?>
